@@ -1,21 +1,8 @@
-// import Image, { StaticImageData } from "next/image";
-// import Gerhaus from "next/font/local";
-// const gerhaus = Gerhaus({ src: "../fonts/gerhaus/gerhaus.ttf" });
+import { useState } from "react";
+import { AccordionDemo } from "./AccordionDemo";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
-// import Futura from "next/font/local";
-
-import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
-// const futura = Futura({ src: "../fonts/futura.ttf" });
-
-type TCompanyFullBox = {
-  title: string;
-  image: string;
-  description: string;
-  subtitle: string;
-  subtitleDesc: string;
-};
 
 const style = {
   position: "absolute" as "absolute",
@@ -30,60 +17,27 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
-function CompanyFullBox({ image, title, description }: TCompanyFullBox) {
+const AddQuestions = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
   return (
-    <div className="grid justify-items-center mb-16">
-      <p
-        className={`uppercase lg:text-[90px] md:text-[70px] text-[50px] `} //${gerhaus.className}
-      >
-        {title}
-      </p>
-      <img
-        src={image}
-        className="object-cover  md:object-contain  xl:block hidden"
-        alt=""
-      />
-      <img
-        src={image}
-        className="min-h-96 lg:object-contain  xl:hidden block rounded-[35px] in-container max-w-[800px] object-cover"
-        alt=""
-      />
-      <div
-        className={`grid lg:grid-cols-2 gap-x-[100px] items-center my-5 lg:my-14 in-container `} //${futura.className}
-      >
-        <p className="text-lg max-lg:mb-5">{description}</p>
-        <div className="grid sm:grid-cols-2 gap-3 items-center">
-          {/* <p className="text-[#374045] text-[25px]">
-            {subtitle}
-            <p className="text-[18px]">{subtitleDesc}</p>
-          </p> */}
-          <p className="text-[20px] font-bold">
-            Что включено:
-            <br />
-            <span className="text-[18px] font-normal ml-[3px]">
-              Верхний ярус кухни включает в себя: Каркас Внутренние полки Фасады
-              Выдвижные ящики
-            </span>
-          </p>
-          <p
-            className="w-[240px] text-[18px] font-normal "
-            data-aos-duration="1000"
-          >
-            Нижний ярус состоит из: Тумбы с выдвижными ящиками Столешницы
-            Бытовой техники
-          </p>
-        </div>
+    <div
+      data-aos="zoom-out-right"
+      data-aos-duration="1000"
+      className="lg:flex mb-10 mt-16 md:mb-24 gap-x-28 items-start"
+    >
+      <div className="flex-[55%] flex-grow-0 max-lg:mb-10">
+        <AccordionDemo />
       </div>
-      <button
-        onClick={handleOpen}
-        className="py-[11px] hover:bg-black hover:text-white hover:border-white transition-all border-[#262626] text-black px-[22px] border rounded-[30px]"
-      >
-        Заказать
-      </button>
+      <div className="max-lg:grid max-lg:max-w-96 max-lg:mx-auto">
+        <button
+          onClick={handleOpen}
+          className="py-[11px] hover:bg-black hover:text-white hover:border-white transition-all border-[#262626] text-black px-[22px] border rounded-[30px]"
+        >
+          ЗАДАТЬ ВОПРОС
+        </button>
+      </div>
 
       <Modal
         open={open}
@@ -160,5 +114,6 @@ function CompanyFullBox({ image, title, description }: TCompanyFullBox) {
       </Modal>
     </div>
   );
-}
-export default CompanyFullBox;
+};
+
+export default AddQuestions;

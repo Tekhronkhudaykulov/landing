@@ -1,4 +1,3 @@
-import { AccordionDemo } from "../components/AccordionDemo";
 import CompanyFullBox from "../components/CompanyFullBox";
 import CompanyInfo from "../components/CompanyInfo";
 import Connection from "../components/Connection";
@@ -30,6 +29,7 @@ import { useRef, useState } from "react";
 import { useClickAway } from "react-use";
 import Hamburger from "hamburger-react";
 import { MobileMenu } from "../components/MobileMenu";
+import AddQuestions from "../components/AddQuestion";
 
 export default function LandingPage() {
   const [isOpen, setOpen] = useState(false);
@@ -108,20 +108,19 @@ export default function LandingPage() {
                 <p className="">МЕБЕЛЬ</p>
               </motion.div>
               <div
-                className={`lg:flex grid gap-6 pt-4 items-center lg:mt-[70px] sm:mt-0  text-[#D3D3D3] `} //${futura.className}
+                className={`lg:flex grid gap-6 pt-4 w-[50%] items-center lg:mt-[70px] sm:mt-0  text-white `} //${futura.className}
               >
                 <motion.p
                   initial={{ y: -100, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.6 }}
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-                  dolor sit amet, consectetur adipiscing elit
+                  Молодая и динамично развивающая компания по производство
+                  комфортной мебели в Узбекистане, работает по индивидуальному
+                  заказу, которые будут доставлять удовольствие заказчикам от
+                  использования.
                 </motion.p>
-                <motion.p
+                {/* <motion.p
                   initial={{ y: -100, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.8 }}
@@ -131,7 +130,7 @@ export default function LandingPage() {
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
                   laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
                   dolor sit amet, consectetur adipiscing elit
-                </motion.p>
+                </motion.p> */}
               </div>
             </div>
             <div className="absolute top-0 left-0 w-full h-full z-[-1]">
@@ -161,33 +160,26 @@ export default function LandingPage() {
             <p
               className={`text-[#595959] lg:text-start sm:text-start text-start mb-5 sm:pr-20 text-[19px] `} //${futura.className}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit
+              Индивидуальный подход для каждого клиента, комфорт, качество,
+              стильный дизайн и высокий стандарт обслуживания - основные
+              составляющие бренда.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 ml-auto justify-items-center gap-[17px]">
               <HomeCard
-                text="Полное сопровождение заказа"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua."
+                text="Гарантия на мебель от 1 года"
+                description="На любую продукцию, произведенную нашей компанией мы даем гарантию минимум 1 год."
               />
               <HomeCard
-                text="Полное сопровождение заказа"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua."
+                text="Замер, сборка, погрузка и доставка"
+                description="Замер, сборка, погрузка и доставка мебели не входит в стоимость, для удобства заказчиков (бесплатно)."
               />
               <HomeCard
-                text="Полное сопровождение заказа"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua."
+                text="Бесплатный инструктаж"
+                description="Проводим бесплатный инструктаж, по правильному использованию мебели для заказчика."
               />
               <HomeCard
-                text="Полное сопровождение заказа"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua."
+                text="Проверенная европейская техника"
+                description="Проверенная европейская техника, сборки мебели и актуальность по отношению к мировым трендам."
               />
             </div>
           </div>
@@ -195,7 +187,7 @@ export default function LandingPage() {
           <CompanyInfo />
 
           <CompanyFullBox
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+            description="Материалы, использованные в производстве кухонь Crealine, отвечают самым высоким стандартам качества, что обеспечивает долговечность и надежность каждого изделия. Благодаря индивидуальному подходу к каждому заказу, клиенты могут реализовать свои собственные идеи и предпочтения, создавая уникальное пространство, отражающее их стиль и характер."
             image={companyFullKitchen}
             subtitle="Что включено:"
             subtitleDesc="Верхний ярус кухни включает в себя:
@@ -205,7 +197,7 @@ export default function LandingPage() {
           />
 
           <CompanyFullBox
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+            description="Спальни Crealine позволяют воплотить в жизнь самые смелые идеи и представления о комфорте и стиле. Индивидуальный подход к каждому заказу позволяет клиентам выбирать сочетания цветов, фактуры и фурнитуры, создавая уникальное и неповторимое пространство, которое отражает их вкусы и желания.Отдыхая в спальне от Crealine, вы окунетесь в атмосферу роскоши и уюта, которая поможет вам полностью расслабиться и забыть о повседневных заботах. Каждый элемент мебели от этого бренда призван создать особую атмосферу гармонии и благополучия, делая ваше пространство уютным и привлекательным."
             image={bedrom}
             subtitle="Что включено:"
             subtitleDesc="Верхний ярус кухни включает в себя:
@@ -213,7 +205,7 @@ export default function LandingPage() {
             title="СПАЛЬНЯ"
           />
           <CompanyFullBox
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+            description="Дизайнерская детская от Crealine - это удивительное пространство, где воображение детей расцветает, а функциональность и стиль сочетаются с безопасностью и комфортом. Каждый элемент этой детской создан с любовью и заботой, чтобы вдохновить и позитивно влиять на развитие маленьких обитателей.Яркие и игривые цвета, сочные оттенки и интересные текстуры делают эту детскую неповторимой и веселой. Мебель и аксессуары дополнены уникальными дизайнерскими элементами, которые стимулируют фантазию и творчество детей."
             image={childRoom}
             subtitle="Что включено:"
             subtitleDesc="Верхний ярус кухни включает в себя:
@@ -222,7 +214,7 @@ export default function LandingPage() {
           />
           <CompanyFullBox
             title="ГОСТИНАЯ"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+            description="Дизайнерская гостиная от Crealine — это искусное сочетание элегантности, современности и функциональности, созданное для тех, кто ценит стиль и комфорт. Каждая деталь в этой гостиной воплощает в себе утонченность и гармонию, призванные вдохновить и удивить.Помещение окутано атмосферой изысканности благодаря изысканным материалам и тщательно подобранным элементам декора. Мягкие, но в то же время строгие линии мебели отражают современный дизайн, подчеркивая роскошь и функциональность каждого предмета."
             image={hotel}
             subtitle="Что включено:"
             subtitleDesc="Верхний ярус кухни включает в себя:
@@ -302,29 +294,29 @@ export default function LandingPage() {
             <div className="justify-items-center gap-y-8 grid">
               <div className="lg:flex justify-center gap-x-72">
                 <UserComment
-                  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                  description="Спасибо Crealine за великолепный дизайн! Наш дом преобразился, стал стильным и уютным благодаря вашим творениям."
                   image={commentUser}
                   name="ИГОРЬ"
                 />
                 <UserComment
-                  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                  description="Просто восхищены качеством и креативностью Crealine! Их мебель и аксессуары прекрасно вписались в наш интерьер."
                   image={aleksey}
                   name="АЛЕКСЕЙ"
                 />
               </div>
               <UserComment
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                description="Заказывали детскую от Crealine. Ребенок в восторге! Яркий, безопасный и очень функциональный дизайн, спасибо!"
                 image={genadiy}
                 name="ГЕНАДИЙ"
               />
               <div className="lg:flex justify-center gap-x-72">
                 <UserComment
-                  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                  description="Мы выбрали Crealine для обновления гостиной и не пожалели! Элегантные и современные решения, превзошли все ожидания."
                   image={commentUser}
                   name="ИГОРЬ"
                 />
                 <UserComment
-                  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                  description="Очень довольны сотрудничеством с Crealine! Профессиональный подход, стильный дизайн и отличное качество продукции."
                   image={aleksey}
                   name="АЛЕКСЕЙ"
                 />
@@ -338,20 +330,7 @@ export default function LandingPage() {
             >
               популярные <br /> вопросы
             </p>
-            <div
-              data-aos="zoom-out-right"
-              data-aos-duration="1000"
-              className="lg:flex mb-10 mt-16 md:mb-24 gap-x-28 items-start"
-            >
-              <div className="flex-[55%] flex-grow-0 max-lg:mb-10">
-                <AccordionDemo />
-              </div>
-              <div className="max-lg:grid max-lg:max-w-96 max-lg:mx-auto">
-                <button className="py-[11px] hover:bg-black hover:text-white hover:border-white transition-all border-[#262626] text-black px-[22px] border rounded-[30px]">
-                  ЗАДАТЬ ВОПРОС
-                </button>
-              </div>
-            </div>
+            <AddQuestions />
           </div>
 
           <div
@@ -366,11 +345,9 @@ export default function LandingPage() {
                 отправьте <br className="max-xl:hidden" /> заявку
               </p>
               <p className={`text-center xl:mx-60 mt-[26px] `}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit
+                Хотите превратить ваше пространство в шедевр дизайна? Оставьте
+                заявку сейчас, и наши эксперты Crealine помогут воплотить ваши
+                идеи в реальность!
               </p>
               <div className="max-xl:w-full grid xl:grid-cols-2 gap-10 mt-20 items-center">
                 <input

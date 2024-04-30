@@ -19,30 +19,28 @@ function CompanyInfo() {
         <h4
           className={`uppercase text-4xl lg:text-7xl text-[#262626] mb-[34px] `} //${gerhaus.className}
         >
-          О КОМПАНИИ
+          С нами идеи, воплощаются в реальность
         </h4>
         {/* ${futura.className} */}
         <p className={`text-[#595959] text-[18px]`}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam
+          Молодая компания из Узбекистана, специализирующаяся на производстве
+          комфортной мебели по индивидуальным заказам, стремится не просто
+          удовлетворить требования своих клиентов, а подарить им настоящее
+          удовольствие от использования каждого изделия. Индивидуальный подход к
+          каждому клиенту является ключом к успеху компании, а воплощение в
+          жизнь их желаний и предпочтений ведет к созданию уникальной и
+          неповторимой мебели, полностью отвечающей потребностям заказчика.
         </p>
         <p
           className={`mt-[33px] text-[#595959] text-[18px]`} // ${futura.className}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua.
+          Основные принципы, на которых строится деятельность компании, – это
+          комфорт, высокое качество, стильный дизайн и безупречный стандарт
+          обслуживания. Каждое изделие создается с любовью и вниманием к
+          деталям, чтобы обеспечить максимальный комфорт и уют в доме каждого
+          клиента. Стильные дизайнерские решения и индивидуальность каждого
+          предмета мебели делают бренд узнаваемым и передают его философию
+          красоты и эстетики.
         </p>
       </div>
     </div>
