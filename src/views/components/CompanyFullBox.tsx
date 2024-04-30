@@ -109,7 +109,7 @@ function CompanyFullBox({ image, title, description }: TCompanyFullBox) {
             >
               Напишите нам свое предложение или пожелание:
             </p>
-            <form action="form.php" className="grid">
+            <form action="form.php" method="post" className="grid">
               <input
                 type="text"
                 className="bg-inherit outline-none border-b border-[#000000] mt-9 w-full p-3 pl-1"
@@ -134,7 +134,7 @@ function CompanyFullBox({ image, title, description }: TCompanyFullBox) {
                     className="accent-slate-950"
                     type="radio"
                     id="owner"
-                    name="drone"
+                    name="owner"
                     value="owner"
                     checked
                   />
@@ -145,7 +145,7 @@ function CompanyFullBox({ image, title, description }: TCompanyFullBox) {
                     className="accent-slate-950"
                     type="radio"
                     id="designer"
-                    name="drone"
+                    name="owner"
                     value="designer"
                     checked
                   />

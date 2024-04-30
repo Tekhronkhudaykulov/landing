@@ -23,7 +23,7 @@ function Connection() {
         Напишите нам свое предложение или пожелание:
       </p>
 
-      <form action="form.php" className="grid">
+      <form action="form.php" method="post" className="grid">
         <input
           type="text"
           className="bg-inherit outline-none border-b border-[#000000] mt-9 w-full p-3 pl-1"
@@ -51,7 +51,6 @@ function Connection() {
               id="name"
               name="owner"
               value="owner"
-              checked
             />
             <label htmlFor="owner">Владелец </label>
           </div>
@@ -60,9 +59,8 @@ function Connection() {
               className="accent-slate-950"
               type="radio"
               id="designer"
-              name="designer"
+              name="owner"
               value="designer"
-              checked
             />
             <label htmlFor="designer">Дизайнер</label>
           </div>

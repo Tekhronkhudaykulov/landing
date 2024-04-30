@@ -119,7 +119,7 @@ export default function LandingPage() {
               <div
                 className={`lg:flex grid gap-6 pt-4 lg:mt-[70px] sm:mt-0  text-white font-[FuturaPT] text-lg`} //${futura.className}
               >
-                <div className="w-[50%">
+                <div className="w-[50%]">
                 <motion.p
                   className="flex-1 "
                   initial={{ y: -100, opacity: 0 }}
