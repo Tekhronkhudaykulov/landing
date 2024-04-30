@@ -38,7 +38,7 @@ function CompanyFullBox({ image, title, description }: TCompanyFullBox) {
   return (
     <div className="grid justify-items-center mb-16">
       <p
-        className={`uppercase lg:text-[90px] md:text-[70px] text-[50px] `} //${gerhaus.className}
+        className={`uppercase lg:text-[90px] md:text-[70px] text-[50px] font-[Gerhaus]`} //${gerhaus.className}
       >
         {title}
       </p>
@@ -53,7 +53,7 @@ function CompanyFullBox({ image, title, description }: TCompanyFullBox) {
         alt=""
       />
       <div
-        className={`grid lg:grid-cols-2 gap-x-[100px] items-center my-5 lg:my-14 in-container `} //${futura.className}
+        className={`grid lg:grid-cols-2 gap-x-[100px] items-center my-5 lg:my-14 in-container font-[FuturaPT]`} //${futura.className}
       >
         <p className="text-lg max-lg:mb-5">{description}</p>
         <div className="grid sm:grid-cols-2 gap-3 items-center">
@@ -80,7 +80,7 @@ function CompanyFullBox({ image, title, description }: TCompanyFullBox) {
       </div>
       <button
         onClick={handleOpen}
-        className="py-[11px] hover:bg-black hover:text-white hover:border-white transition-all border-[#262626] text-black px-[22px] border rounded-[30px]"
+        className="py-[11px] hover:bg-black hover:text-white hover:border-white transition-all border-[#262626] text-black px-[22px] border rounded-[30px] font-[FuturaPT] text-2xl"
       >
         Заказать
       </button>

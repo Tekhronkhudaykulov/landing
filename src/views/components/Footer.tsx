@@ -18,7 +18,7 @@ function Footer() {
         <nav className="flex-1">
           <ul className="text-[#BCBCBC] grid grid-cols-2 gap-x-7 gap-y-3">
             {navDatas.map((nav) => (
-              <li key={nav.name}>{nav.name}</li>
+              <li key={nav.name} className="text-lg font-[Montserrat]">{nav.name}</li>
             ))}
           </ul>
         </nav>

@@ -33,7 +33,7 @@ const AddQuestions = () => {
       <div className="max-lg:grid max-lg:max-w-96 max-lg:mx-auto">
         <button
           onClick={handleOpen}
-          className="py-[11px] hover:bg-black hover:text-white hover:border-white transition-all border-[#262626] text-black px-[22px] border rounded-[30px]"
+          className="py-[11px] hover:bg-black hover:text-white hover:border-white transition-all border-[#262626] text-black px-[22px] border rounded-[30px] text-2xl"
         >
           ЗАДАТЬ ВОПРОС
         </button>

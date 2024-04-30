@@ -15,7 +15,7 @@ export function AccordionDemo() {
       //${futura.className}
     >
       <AccordionItem value="item-1">
-        <AccordionTrigger className="text-[20px] text-black">
+        <AccordionTrigger className="text-3xl text-black ">
           МОЖНО СДЕЛАТЬ МЕБЕЛЬ ПОД ЗАКАЗ ?
         </AccordionTrigger>
         <AccordionContent
@@ -34,7 +34,7 @@ export function AccordionDemo() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
-        <AccordionTrigger className="text-[20px] text-black">
+        <AccordionTrigger className="text-3xl text-black">
           ЕСТЬ ЛИ У ВАС ДОСТАВКА?
         </AccordionTrigger>
         <AccordionContent className="text-[17px] text-[#595959]">
@@ -51,7 +51,7 @@ export function AccordionDemo() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
-        <AccordionTrigger className="text-[20px] text-black">
+        <AccordionTrigger className="text-3xl text-black">
           ВЫ ДАЕТЕ ГАРАНТИИ?
         </AccordionTrigger>
         <AccordionContent className="text-[17px] text-[#595959]">
@@ -68,7 +68,7 @@ export function AccordionDemo() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-4">
-        <AccordionTrigger className="text-[20px] text-black">
+        <AccordionTrigger className="text-3xl text-black">
           ИЗ КАКИХ МАТЕРИАЛОВ ВАША ПРОДУКЦИЯ
         </AccordionTrigger>
         <AccordionContent className="text-[17px] text-[#595959]">

@@ -17,12 +17,12 @@ function CompanyInfo() {
       <img src={rightImg} alt="" className="max-md:mb-10" />
       <div className="md:pl-[70px] p-4">
         <h4
-          className={`uppercase text-4xl lg:text-7xl text-[#262626] mb-[34px] `} //${gerhaus.className}
+          className={`uppercase text-4xl lg:text-7xl text-[#262626] mb-[34px] font-[Gerhaus]`} //${gerhaus.className}
         >
           С нами идеи, воплощаются в реальность
         </h4>
         {/* ${futura.className} */}
-        <p className={`text-[#595959] text-[18px]`}>
+        <p className={`text-[#595959] text-xl font-[FuturaPT]`}>
           Молодая компания из Узбекистана, специализирующаяся на производстве
           комфортной мебели по индивидуальным заказам, стремится не просто
           удовлетворить требования своих клиентов, а подарить им настоящее
@@ -32,7 +32,7 @@ function CompanyInfo() {
           неповторимой мебели, полностью отвечающей потребностям заказчика.
         </p>
         <p
-          className={`mt-[33px] text-[#595959] text-[18px]`} // ${futura.className}
+          className={`mt-[33px] text-[#595959] text-xl font-[FuturaPT]`} // ${futura.className}
         >
           Основные принципы, на которых строится деятельность компании, – это
           комфорт, высокое качество, стильный дизайн и безупречный стандарт

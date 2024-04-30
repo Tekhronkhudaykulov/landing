@@ -11,11 +11,11 @@ function HomeCard({ description, text }: THomeCard) {
       style={{ backgroundPositionX: "50px" }}
       className="max-w-[331px] w-full bg-bottom bg-[url('/one.svg')] bg-no-repeat pt-6 rounded-[30px] py-24 px-4 bg-[#EEEEEE]"
     >
-      <p className="uppercase text-[#262626] h-[120px] font-semibold text-[25px] break-words">
+      <p className="uppercase text-[#262626] h-[120px] font-semibold text-[25px] break-words font-[Montserrat]">
         {text}
       </p>
       {/* ${futura.className} */}
-      <p className={`text-sm mt-1 text-[19px] `}>{description}</p>
+      <p className={`mt-1 text-xl font-[FuturaPT]`}>{description}</p>
     </div>
   );
 }

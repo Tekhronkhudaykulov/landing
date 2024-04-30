@@ -17,9 +17,9 @@ function UserComment({ description, image, name }: TUserComment) {
         alt=""
       />
       {/* ${futura.className} */}
-      <h4 className={`text-[#374045] font-bold text-3xl `}>{name}</h4>
+      <h4 className={`text-[#374045] font-bold text-3xl font-[FuturaPT]`}>{name}</h4>
       {/* ${futura.className} */}
-      <p className={`text-sm mt-2 text-[18px] `}>{description}</p>
+      <p className={`mt-2 text-xl font-[FuturaPT]`}>{description}</p>
     </div>
   );
 }

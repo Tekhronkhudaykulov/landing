@@ -117,9 +117,10 @@ export default function LandingPage() {
                 <p className="">МЕБЕЛЬ</p>
               </motion.div>
               <div
-                className={`lg:flex grid gap-6 pt-4 w-[50%] items-center lg:mt-[70px] sm:mt-0  text-white `} //${futura.className}
+                className={`lg:flex grid gap-6 pt-4 lg:mt-[70px] sm:mt-0  text-white font-[FuturaPT] text-lg`} //${futura.className}
               >
                 <motion.p
+                  className="flex-1"
                   initial={{ y: -100, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.6 }}
@@ -129,7 +130,8 @@ export default function LandingPage() {
                   заказу, которые будут доставлять удовольствие заказчикам от
                   использования.
                 </motion.p>
-                {/* <motion.p
+                <motion.p
+                className="flex-1"
                   initial={{ y: -100, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.8 }}
@@ -139,7 +141,7 @@ export default function LandingPage() {
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
                   laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
                   dolor sit amet, consectetur adipiscing elit
-                </motion.p> */}
+                </motion.p>
               </div>
             </div>
             <div className="absolute top-0 left-0 w-full h-full z-[-1]">
@@ -155,7 +157,7 @@ export default function LandingPage() {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.8 }}
-            className={`uppercase in-container text-4xl sm:text-5xl sm:leading-[50px] leading-[46px] lg:text-8xl mt-14 md:mt-28 `} //${gerhaus.className}
+            className={`uppercase in-container text-4xl sm:text-5xl sm:leading-[50px] leading-[46px] lg:text-8xl mt-14 md:mt-28 font-[Gerhaus]`} //${gerhaus.className}
           >
             <p className="premium">НАШи</p>
             <p className="w-fit sm:pl-32 mr-auto premium ">ПРЕИМУЩЕСТВА</p>
@@ -167,7 +169,7 @@ export default function LandingPage() {
             className="lg:grid grid-cols-2 in-container gap-x-3"
           >
             <p
-              className={`text-[#595959] lg:text-start sm:text-start text-start mb-5 sm:pr-20 text-[19px] `} //${futura.className}
+              className={`text-[#595959] lg:text-start sm:text-start text-start mb-5 sm:pr-20 font-[FuturaPT] text-xl`} //${futura.className}
             >
               Индивидуальный подход для каждого клиента, комфорт, качество,
               стильный дизайн и высокий стандарт обслуживания - основные
@@ -236,7 +238,7 @@ export default function LandingPage() {
 
           <div className="in-container">
             <p
-              className={`uppercase text-4xl mb-6 sm:text-5xl lg:text-8xl `} //${gerhaus.className}
+              className={`uppercase text-4xl mb-6 sm:text-5xl lg:text-8xl font-[Gerhaus]`} //${gerhaus.className}
               data-aos="zoom-out-right"
               data-aos-duration="1000"
             >
@@ -300,7 +302,7 @@ export default function LandingPage() {
               </div>
             </div>
             <p
-              className={`uppercase mt-20 md:mt-40 text-4xl mb-6 sm:text-5xl lg:text-8xl `} //${gerhaus.className}
+              className={`uppercase mt-20 md:mt-40 text-4xl mb-6 sm:text-5xl lg:text-8xl font-[Gerhaus]`} //${gerhaus.className}
             >
               ОТЗЫВЫ
             </p>
@@ -337,7 +339,7 @@ export default function LandingPage() {
             </div>
 
             <p
-              className={`uppercase mt-20 md:mt-40 text-4xl mb-6 sm:text-5xl lg:text-8xl `} //${gerhaus.className}
+              className={`uppercase mt-20 md:mt-40 text-4xl mb-6 sm:text-5xl lg:text-8xl font-[Gerhaus]`} //${gerhaus.className}
               data-aos="zoom-out-right"
               data-aos-duration="1000"
             >
@@ -353,11 +355,11 @@ export default function LandingPage() {
           >
             <div className="max-container relative text-white justify-items-center grid pt-24">
               <p
-                className={`uppercase max-xl:py-12 text-4xl mb-6 sm:text-5xl lg:text-8xl text-center`} // ${gerhaus.className}
+                className={`uppercase max-xl:py-12 text-4xl mb-6 sm:text-5xl lg:text-8xl text-center font-[Gerhaus]`} // ${gerhaus.className}
               >
                 отправьте <br className="max-xl:hidden" /> заявку
               </p>
-              <p className={`text-center xl:mx-60 mt-[26px] `}>
+              <p className={`text-center xl:mx-60 mt-[26px] font-[FuturaPT] text-2xl`}>
                 Хотите превратить ваше пространство в шедевр дизайна? Оставьте
                 заявку сейчас, и наши эксперты Crealine помогут воплотить ваши
                 идеи в реальность!
@@ -400,7 +402,7 @@ export default function LandingPage() {
 
           <div className="in-container">
             <p
-              className={` uppercase mt-20 md:mt-40 text-4xl mb-6 sm:text-5xl lg:text-8xl`} //${gerhaus.className}
+              className={` uppercase mt-20 md:mt-40 text-4xl mb-6 sm:text-5xl lg:text-8xl font-[Gerhaus]`} //${gerhaus.className}
             >
               КОНТАКТЫ
             </p>
