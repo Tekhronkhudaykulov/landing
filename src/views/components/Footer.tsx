@@ -4,8 +4,8 @@ import { navDatas } from "./Navbar";
 import logo from "../../../public/logo.svg";
 import tg from "../../../public/tg.svg";
 import insta from "../../../public/insta.svg";
-import yt from "../../../public/yt.svg";
-import twit from "../../../public/twit.svg";
+// import yt from "../../../public/yt.svg";
+// import twit from "../../../public/twit.svg";
 import facebook from "../../../public/facebook.svg";
 
 function Footer() {
@@ -66,7 +66,7 @@ function Footer() {
             <h4>
               <p className="text-[15px] text-[#727272]">Почта:</p>
               <a className="font-bold text-[18px] text-white" href="/">
-                Почта
+              crealine.m@gmail.com
               </a>
             </h4>
           </div>
@@ -76,16 +76,21 @@ function Footer() {
               <img alt="d" src={tg} />
             </div>
             <div className="w-9 h-9 rounded-full">
+              <a href="https://www.instagram.com/crealine.uz/" target="blank">
               <img alt="d" src={insta} />
+              </a>
             </div>
-            <div className="bg-white w-9 h-9 rounded-full">
+            {/* <div className="bg-white w-9 h-9 rounded-full">
               <img alt="d" src={yt} />
-            </div>
-            <div className="bg-white w-9 h-9 rounded-full">
+            </div> */}
+            {/* <div className="bg-white w-9 h-9 rounded-full">
               <img alt="d" src={twit} />
-            </div>{" "}
+            </div> */}
             <div className="bg-white w-9 h-9 rounded-full">
-              <img alt="d" src={facebook} />
+            <a href="https://www.facebook.com/crealine.uz">
+            <img alt="d" src={facebook} />
+
+            </a>
             </div>
           </div>
         </div>

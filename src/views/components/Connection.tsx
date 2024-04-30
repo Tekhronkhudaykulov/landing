@@ -48,7 +48,7 @@ function Connection() {
             <input
               className="accent-slate-950"
               type="radio"
-              id="name"
+              id="owner"
               name="owner"
               value="owner"
             />
