@@ -62,7 +62,7 @@ export default function LandingPage() {
                             animate={{ y: 0 }}
                             transition={{ delay: (index + 1) * 0.1 }}
                           >
-                            <a href={`#${nav.goTo}`}>{nav.name}</a>
+                            <a>{nav.name}</a>
                           </motion.li>
                         ))}
                       </ul>
