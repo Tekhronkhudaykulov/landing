@@ -6,7 +6,14 @@ import HomeCard from "../components/HomeCard";
 import { navDatas } from "../components/Navbar";
 import UserComment from "../components/UserComment";
 // import Image from "next/image";
-import homeFurniture from "../../../public/homeFurniture.png";
+import image1 from "../../../public/1.jpg";
+import image2 from "../../../public/2.jpg";
+import image3 from "../../../public/3.jpg";
+import image4 from "../../../public/4.jpg";
+import image5 from "../../../public/5.jpg";
+import image6 from "../../../public/6.jpg";
+import image7 from "../../../public/8.jpg";
+
 import map from "../../../public/map.svg";
 // import Futura from "next/font/local";
 // const futura = Futura({ src: "../fonts/futura.ttf" });
@@ -19,6 +26,8 @@ import hotel from "../../../public/hotel.png";
 import commentUser from "../../../public/commentUser.png";
 import aleksey from "../../../public/aleksey.png";
 import genadiy from "../../../public/genadiy.png";
+import asad from "../../../public/Asad.jpg";
+import bola from "../../../public/Bola.jpg";
 
 import headerBg from "../../../public/headerBg.png";
 import Footer from "../components/Footer";
@@ -235,14 +244,14 @@ export default function LandingPage() {
                   className="w-full rounded-[20px] h-[332px] object-cover"
                   data-aos="zoom-out-right"
                   data-aos-duration="1000"
-                  src={homeFurniture}
+                  src={image1}
                   alt=""
                 />
                 <img
                   className="w-full rounded-[20px] h-[332px] object-cover"
                   data-aos="zoom-out-right"
                   data-aos-duration="1000"
-                  src={homeFurniture}
+                  src={image2}
                   alt=""
                 />
               </div>
@@ -251,21 +260,21 @@ export default function LandingPage() {
                   className="w-full rounded-[20px] h-[332px] object-cover"
                   data-aos="zoom-out-right"
                   data-aos-duration="1000"
-                  src={homeFurniture}
+                  src={image3}
                   alt=""
                 />
                 <img
                   className="w-full rounded-[20px] h-[332px] object-cover"
                   data-aos="zoom-out-right"
                   data-aos-duration="1000"
-                  src={homeFurniture}
+                  src={image4}
                   alt=""
                 />
                 <img
                   className="w-full rounded-[20px] h-[332px] object-cover"
                   data-aos="zoom-out-right"
                   data-aos-duration="1000"
-                  src={homeFurniture}
+                  src={image5}
                   alt=""
                 />
               </div>
@@ -274,14 +283,14 @@ export default function LandingPage() {
                   className="w-full rounded-[20px] h-[332px] object-cover"
                   data-aos="zoom-out-right"
                   data-aos-duration="1000"
-                  src={homeFurniture}
+                  src={image6}
                   alt=""
                 />
                 <img
                   className="w-full rounded-[20px] h-[332px] object-cover"
                   data-aos="zoom-out-right"
                   data-aos-duration="1000"
-                  src={homeFurniture}
+                  src={image7}
                   alt=""
                 />
               </div>
@@ -295,12 +304,12 @@ export default function LandingPage() {
               <div className="lg:flex justify-center gap-x-72">
                 <UserComment
                   description="Спасибо Crealine за великолепный дизайн! Наш дом преобразился, стал стильным и уютным благодаря вашим творениям."
-                  image={commentUser}
-                  name="ИГОРЬ"
+                  image={asad}
+                  name="АСАД"
                 />
                 <UserComment
                   description="Просто восхищены качеством и креативностью Crealine! Их мебель и аксессуары прекрасно вписались в наш интерьер."
-                  image={aleksey}
+                  image={bola}
                   name="АЛЕКСЕЙ"
                 />
               </div>
