@@ -119,8 +119,9 @@ export default function LandingPage() {
               <div
                 className={`lg:flex grid gap-6 pt-4 lg:mt-[70px] sm:mt-0  text-white font-[FuturaPT] text-lg`} //${futura.className}
               >
+                <div className="w-[50%">
                 <motion.p
-                  className="flex-1"
+                  className="flex-1 "
                   initial={{ y: -100, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.6 }}
@@ -130,7 +131,8 @@ export default function LandingPage() {
                   заказу, которые будут доставлять удовольствие заказчикам от
                   использования.
                 </motion.p>
-                <motion.p
+                </div>
+                {/* <motion.p
                 className="flex-1"
                   initial={{ y: -100, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
@@ -141,7 +143,7 @@ export default function LandingPage() {
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
                   laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
                   dolor sit amet, consectetur adipiscing elit
-                </motion.p>
+                </motion.p> */}
               </div>
             </div>
             <div className="absolute top-0 left-0 w-full h-full z-[-1]">

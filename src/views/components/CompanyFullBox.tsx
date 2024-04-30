@@ -109,33 +109,36 @@ function CompanyFullBox({ image, title, description }: TCompanyFullBox) {
             >
               Напишите нам свое предложение или пожелание:
             </p>
-            <div className="grid">
+            <form action="form.php" className="grid">
               <input
                 type="text"
                 className="bg-inherit outline-none border-b border-[#000000] mt-9 w-full p-3 pl-1"
                 placeholder="Ваше имя*"
+                id="name"
               />
               <input
                 type="text"
                 className="bg-inherit outline-none border-b border-[#000000] mt-9 w-full p-3 pl-1"
                 placeholder="Ваш телефон*"
+                id="phone"
               />
               <input
                 type="text"
                 className="bg-inherit outline-none border-b border-[#000000] mt-9 w-full p-3 pl-1"
                 placeholder="Комментарий*"
+                id="comment"
               />
               <div className="flex mt-9">
                 <div className="flex items-center gap-x-1">
                   <input
                     className="accent-slate-950"
                     type="radio"
-                    id="boss"
+                    id="owner"
                     name="drone"
-                    value="boss"
+                    value="owner"
                     checked
                   />
-                  <label htmlFor="boss">Владелец </label>
+                  <label htmlFor="owner">Владелец </label>
                 </div>
                 <div className="ml-[20px] flex items-center gap-x-1">
                   <input
@@ -154,7 +157,7 @@ function CompanyFullBox({ image, title, description }: TCompanyFullBox) {
               >
                 Отправить
               </button>
-            </div>
+            </form>
           </div>
         </Box>
       </Modal>
