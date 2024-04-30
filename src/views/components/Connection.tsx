@@ -29,18 +29,21 @@ function Connection() {
           className="bg-inherit outline-none border-b border-[#000000] mt-9 w-full p-3 pl-1"
           placeholder="Ваше имя*"
           id="name"
+          name="name"
         />
         <input
           type="text"
           className="bg-inherit outline-none border-b border-[#000000] mt-9 w-full p-3 pl-1"
           placeholder="Ваш телефон*"
           id="phone"
+          name="phone"
         />
         <input
           type="text"
           id="comment"
           className="bg-inherit outline-none border-b border-[#000000] mt-9 w-full p-3 pl-1"
           placeholder="Комментарий*"
+          name="comment"
         />
 
         <div className="flex mt-9">
@@ -51,6 +54,7 @@ function Connection() {
               id="owner"
               name="owner"
               value="owner"
+              
             />
             <label htmlFor="owner">Владелец </label>
           </div>

@@ -69,43 +69,45 @@ const AddQuestions = () => {
                 className="bg-inherit outline-none border-b border-[#000000] mt-9 w-full p-3 pl-1"
                 placeholder="Ваше имя*"
                 id="name"
+                name="name"
               />
               <input
                 type="text"
                 className="bg-inherit outline-none border-b border-[#000000] mt-9 w-full p-3 pl-1"
                 placeholder="Ваш телефон*"
                 id="phone"
+                name="phone"
               />
               <input
                 type="text"
                 className="bg-inherit outline-none border-b border-[#000000] mt-9 w-full p-3 pl-1"
                 placeholder="Комментарий*"
                 id="comment"
+                name="comment"
               />
               <div className="flex mt-9">
-                <div className="flex items-center gap-x-1">
-                  <input
-                    className="accent-slate-950"
-                    type="radio"
-                    id="owner"
-                    name="drone"
-                    value="boss"
-                    checked
-                  />
-                  <label htmlFor="boss">Владелец </label>
-                </div>
-                <div className="ml-[20px] flex items-center gap-x-1">
-                  <input
-                    className="accent-slate-950"
-                    type="radio"
-                    id="designer"
-                    name="drone"
-                    value="designer"
-                    checked
-                  />
-                  <label htmlFor="designer">Дизайнер</label>
-                </div>
-              </div>
+          <div className="flex items-center gap-x-1">
+            <input
+              className="accent-slate-950"
+              type="radio"
+              id="owner"
+              name="owner"
+              value="owner"
+              
+            />
+            <label htmlFor="owner">Владелец </label>
+          </div>
+          <div className="ml-[20px] flex items-center gap-x-1">
+            <input
+              className="accent-slate-950"
+              type="radio"
+              id="designer"
+              name="owner"
+              value="designer"
+            />
+            <label htmlFor="designer">Дизайнер</label>
+          </div>
+        </div>
               <button
                 className={`bg-[#262626] rounded-[6px] font-bold text-[17px] hover:opacity-85 transition-all py-4 px-16 sm:px-36 text-white mt-14 `} //${futura.className}
               >

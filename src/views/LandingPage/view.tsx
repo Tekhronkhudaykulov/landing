@@ -49,7 +49,7 @@ export default function LandingPage() {
 
   return (
     <>
-      {isOpen && <MobileMenu isOpen={isOpen} />}
+      {isOpen && <MobileMenu />}
       <AnimatePresence mode="wait">
         <main>
           {/* <Navbar /> */}
@@ -71,7 +71,7 @@ export default function LandingPage() {
                             animate={{ y: 0 }}
                             transition={{ delay: (index + 1) * 0.1 }}
                           >
-                            <a>{nav.name}</a>
+                            <div onClick={() => document.getElementById(nav.el)?.scrollIntoView()}>{nav.name}</div>
                           </motion.li>
                         ))}
                       </ul>
@@ -154,7 +154,7 @@ export default function LandingPage() {
               />
             </div>
           </div>
-
+            <div id="1"></div>
           <motion.div
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -196,7 +196,7 @@ export default function LandingPage() {
               />
             </div>
           </div>
-
+              <div id="2"></div>
           <CompanyInfo />
 
           <CompanyFullBox
@@ -238,7 +238,7 @@ export default function LandingPage() {
             Выдвижные ящики"
           />
 
-          <div className="in-container">
+          <div className="in-container" id="4">
             <p
               className={`uppercase text-4xl mb-6 sm:text-5xl lg:text-8xl font-[Gerhaus]`} //${gerhaus.className}
               data-aos="zoom-out-right"
@@ -303,6 +303,7 @@ export default function LandingPage() {
                 />
               </div>
             </div>
+            <div id="5"></div>
             <p
               className={`uppercase mt-20 md:mt-40 text-4xl mb-6 sm:text-5xl lg:text-8xl font-[Gerhaus]`} //${gerhaus.className}
             >
@@ -339,7 +340,6 @@ export default function LandingPage() {
                 />
               </div>
             </div>
-
             <p
               className={`uppercase mt-20 md:mt-40 text-4xl mb-6 sm:text-5xl lg:text-8xl font-[Gerhaus]`} //${gerhaus.className}
               data-aos="zoom-out-right"
@@ -402,7 +402,7 @@ export default function LandingPage() {
             </div>
           </div>
 
-          <div className="in-container">
+          <div className="in-container" id="6">
             <p
               className={` uppercase mt-20 md:mt-40 text-4xl mb-6 sm:text-5xl lg:text-8xl font-[Gerhaus]`} //${gerhaus.className}
             >

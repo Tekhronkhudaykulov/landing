@@ -1,8 +1,7 @@
 import { navDatas } from "./Navbar";
 import { motion } from "framer-motion";
 
-export const MobileMenu = ({ isOpen }: any) => {
-  console.log(isOpen);
+export const MobileMenu = () => {
   return (
     <>
       <motion.menu

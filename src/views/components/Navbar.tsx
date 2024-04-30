@@ -13,26 +13,37 @@ export const navDatas = [
   {
     name: "Преимущества",
     goTo: "advantages",
+    el: "1"
   },
   {
     name: "О компании",
     goTo: "about",
+    el: "2"
+
   },
   {
     name: "Услуги",
     goTo: "services",
+    el: "1"
+
   },
   {
     name: "Галерея",
     goTo: "gallery",
+    el: "4"
+
   },
   {
     name: "Отзывы",
     goTo: "reviews",
+    el: "5"
+
   },
   {
     name: "Контакты",
     goTo: "contacts",
+    el: "6"
+
   },
 ];
 
@@ -85,7 +96,7 @@ function Navbar() {
           </motion.div>
         </div>
       </header>
-      {isOpen && <MobileMenu isOpen={isOpen} />}
+      {isOpen && <MobileMenu  />}
     </div>
   );
 }

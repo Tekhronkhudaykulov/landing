@@ -9,6 +9,7 @@ import rightImg from "../../../public/rightImg.png";
 function CompanyInfo() {
   return (
     <div
+
       style={{ gridTemplateColumns: "46% 1fr" }}
       className="mt-28 md:grid items-center mb-16 md:mb-40"
       data-aos="zoom-out-right"
