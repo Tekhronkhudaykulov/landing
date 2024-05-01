@@ -366,18 +366,29 @@ export default function LandingPage() {
                 заявку сейчас, и наши эксперты Crealine помогут воплотить ваши
                 идеи в реальность!
               </p>
-              <div className="max-xl:w-full grid xl:grid-cols-2 gap-10 mt-20 items-center">
+              <form action="form.php" method="post" className="max-xl:w-full grid xl:grid-cols-2 gap-10 mt-20 items-center">
                 <input
                   type="text"
                   className="bg-inherit outline-none border-b w-full p-3 pl-1"
                   placeholder="ИМЯ"
+                  name="name"
+                  id="name"
                 />
                 <input
-                  type="text"
+                  type="number"
                   className="bg-inherit outline-none border-b w-full p-3 pl-1"
                   placeholder="НОМЕР ТЕЛЕФОНА"
+                  name="phone"
+                  id="phone"
                 />
-              </div>
+                   <input
+                  type="text"
+                  className="bg-inherit hidden outline-none border-b w-full p-3 pl-1"
+                  placeholder="ИМЯ"
+                  name="comment"
+                  id="comment"
+                />
+              </form>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

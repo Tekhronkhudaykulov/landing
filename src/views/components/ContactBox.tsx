@@ -34,7 +34,7 @@ function ContactBox() {
           <p
             className={`text-[#727272]  font-medium text-[14px]`} // ${futura.className}
           >
-             Время работы 9:00-18:00
+            Время работы 9:00-18:00
           </p>
         </div>
       </div>
@@ -45,18 +45,22 @@ function ContactBox() {
           Наши контакты:
         </p>
 
-        <div className="flex items-center mt-3">
-          <Phone width={30} />
+        <div className="flex items-center  mt-3">
+          <div className="w-[50px]">
+            <Phone width={30} />
+          </div>
           <a
             href="mailto:lorem@gmail.com"
             className={`text-[#727272]  font-medium text-[14px] `} //${futura.className}
           >
-           +998977517519
+            +99897 751 75 19
           </a>
         </div>
 
-        <div className="flex items-center mt-3">
-          <Mail width={30} />
+        <div className="flex items-center  mt-3">
+          <div className="w-[40px]">
+            <Mail width={30} />
+          </div>
           <a
             href="mailto:lorem@gmail.com"
             className={`text-[#727272]  font-medium text-[14px] `} //${futura.className}

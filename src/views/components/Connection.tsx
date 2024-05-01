@@ -53,8 +53,6 @@ function Connection() {
               type="radio"
               id="owner"
               name="owner"
-              value="owner"
-              
             />
             <label htmlFor="owner">Владелец </label>
           </div>
@@ -64,7 +62,6 @@ function Connection() {
               type="radio"
               id="designer"
               name="owner"
-              value="designer"
             />
             <label htmlFor="designer">Дизайнер</label>
           </div>
