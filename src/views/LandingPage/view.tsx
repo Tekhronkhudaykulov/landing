@@ -71,7 +71,15 @@ export default function LandingPage() {
                             animate={{ y: 0 }}
                             transition={{ delay: (index + 1) * 0.1 }}
                           >
-                            <div onClick={() => document.getElementById(nav.el)?.scrollIntoView()}>{nav.name}</div>
+                            <div
+                              onClick={() =>
+                                document
+                                  .getElementById(nav.el)
+                                  ?.scrollIntoView()
+                              }
+                            >
+                              {nav.name}
+                            </div>
                           </motion.li>
                         ))}
                       </ul>
@@ -119,18 +127,18 @@ export default function LandingPage() {
               <div
                 className={`lg:flex grid gap-6 pt-4 lg:mt-[70px] sm:mt-0  text-white font-[FuturaPT] text-lg`} //${futura.className}
               >
-                <div className="w-[50%]">
-                <motion.p
-                  className="flex-1 "
-                  initial={{ y: -100, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.6 }}
-                >
-                  Молодая и динамично развивающая компания по производство
-                  комфортной мебели в Узбекистане, работает по индивидуальному
-                  заказу, которые будут доставлять удовольствие заказчикам от
-                  использования.
-                </motion.p>
+                <div className="md:w-[50%]">
+                  <motion.p
+                    className="flex-1 "
+                    initial={{ y: -100, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.6 }}
+                  >
+                    Молодая и динамично развивающая компания по производство
+                    комфортной мебели в Узбекистане, работает по индивидуальному
+                    заказу, которые будут доставлять удовольствие заказчикам от
+                    использования.
+                  </motion.p>
                 </div>
                 {/* <motion.p
                 className="flex-1"
@@ -154,7 +162,7 @@ export default function LandingPage() {
               />
             </div>
           </div>
-            <div id="1"></div>
+          <div id="1"></div>
           <motion.div
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -196,7 +204,7 @@ export default function LandingPage() {
               />
             </div>
           </div>
-              <div id="2"></div>
+          <div id="2"></div>
           <CompanyInfo />
 
           <CompanyFullBox
@@ -310,7 +318,7 @@ export default function LandingPage() {
               ОТЗЫВЫ
             </p>
             <div className="justify-items-center gap-y-8 grid">
-              <div className="lg:flex justify-center gap-x-72">
+              <div className="lg:flex justify-center  gap-x-72">
                 <UserComment
                   description="Спасибо Crealine за великолепный дизайн! Наш дом преобразился, стал стильным и уютным благодаря вашим творениям."
                   image={asad}
@@ -361,12 +369,18 @@ export default function LandingPage() {
               >
                 отправьте <br className="max-xl:hidden" /> заявку
               </p>
-              <p className={`text-center xl:mx-60 mt-[26px] font-[FuturaPT] text-2xl`}>
+              <p
+                className={`text-center xl:mx-60 mt-[26px] font-[FuturaPT] text-2xl`}
+              >
                 Хотите превратить ваше пространство в шедевр дизайна? Оставьте
                 заявку сейчас, и наши эксперты Crealine помогут воплотить ваши
                 идеи в реальность!
               </p>
-              <form action="form.php" method="post" className="max-xl:w-full grid xl:grid-cols-2 gap-10 mt-20 items-center">
+              <form
+                action="form.php"
+                method="post"
+                className="max-xl:w-full grid xl:grid-cols-2 gap-10 mt-20 items-center"
+              >
                 <input
                   type="text"
                   className="bg-inherit outline-none border-b w-full p-3 pl-1"
@@ -381,7 +395,7 @@ export default function LandingPage() {
                   name="phone"
                   id="phone"
                 />
-                   <input
+                <input
                   type="text"
                   className="bg-inherit hidden outline-none border-b w-full p-3 pl-1"
                   placeholder="ИМЯ"

@@ -10,16 +10,22 @@ type TUserComment = {
 
 function UserComment({ description, image, name }: TUserComment) {
   return (
-    <div className="w-[280px]">
+    <div className="w-[280px] my-[20px]">
       <img
         className="w-[280px] h-[280px] mb-3 rounded-full"
         src={image}
         alt=""
       />
       {/* ${futura.className} */}
-      <h4 className={`text-[#374045] font-bold text-3xl font-[FuturaPT]`}>{name}</h4>
+      <h4
+        className={`text-[#374045] font-bold text-3xl text-center font-[FuturaPT]`}
+      >
+        {name}
+      </h4>
       {/* ${futura.className} */}
-      <p className={`mt-2 text-xl font-[FuturaPT]`}>{description}</p>
+      <p className={`mt-2 text-xl text-center font-[FuturaPT]`}>
+        {description}
+      </p>
     </div>
   );
 }
