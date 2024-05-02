@@ -13,7 +13,6 @@ import image4 from "../../../public/4.jpg";
 import image5 from "../../../public/5.jpg";
 import image6 from "../../../public/6.jpg";
 import image7 from "../../../public/8.jpg";
-
 import map from "../../../public/map.svg";
 // import Futura from "next/font/local";
 // const futura = Futura({ src: "../fonts/futura.ttf" });
@@ -28,13 +27,14 @@ import aleksey from "../../../public/aleksey.png";
 import genadiy from "../../../public/genadiy.png";
 import asad from "../../../public/Asad.jpg";
 import bola from "../../../public/Bola.jpg";
+import logoFixed from "../../../public/CREALINE.svg";
 
 import headerBg from "../../../public/headerBg.png";
 import Footer from "../components/Footer";
 import sendReqSvg from "../../../public/sendReq.svg";
 import Logo from "../../../public/logo.svg";
 import { AnimatePresence, motion } from "framer-motion";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useClickAway } from "react-use";
 import Hamburger from "hamburger-react";
 import { MobileMenu } from "../components/MobileMenu";
@@ -42,10 +42,20 @@ import AddQuestions from "../components/AddQuestion";
 
 export default function LandingPage() {
   const [isOpen, setOpen] = useState(false);
+  const ref = useRef<any>(null);
 
-  const ref = useRef(null);
-
+  const [active, setActive] = useState(false);
   useClickAway(ref, () => setOpen(false));
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        setActive(true);
+      } else {
+        setActive(false);
+      }
+    });
+  }, []);
 
   return (
     <>
@@ -53,14 +63,23 @@ export default function LandingPage() {
       <AnimatePresence mode="wait">
         <main>
           {/* <Navbar /> */}
-
           <div ref={ref}>
             <header className="absolute top-0 left-0 w-full">
               <div>
-                <div className="fixed top-0 left-0 right-0 bg-[black] z-[9999]">
+                <div
+                  className={`${
+                    active == true
+                      ? "fixed top-0 left-0 right-0 bg-[#47413C] z-[9999]"
+                      : "fixed top-0 left-0 right-0 bg-[black] z-[9999]"
+                  }`}
+                >
                   <div className="max-container flex items-center justify-between">
                     <motion.a initial={{ y: -100 }} animate={{ y: 0 }} href="/">
-                      <img src={Logo} alt="" />
+                      {active == true ? (
+                        <img src={logoFixed} alt="" />
+                      ) : (
+                        <img src={Logo} alt="" />
+                      )}
                     </motion.a>
                     <nav className="text-white">
                       <ul className="lg:flex hidden mx-6 flex-wrap gap-x-8 text-lg uppercase">
@@ -118,11 +137,11 @@ export default function LandingPage() {
               <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                className={`uppercase text-4xl sm:leading-[70px] font-[400] !font-[Gerhaus] leading-[50px] sm:text-5xl lg:text-8xl `} //${gerhaus.className}
+                className={`uppercase fontFamiliy text-4xl sm:leading-[70px] font-bold  leading-[50px] sm:text-5xl lg:text-8xl `} //${gerhaus.className}
               >
-                <p>производим</p>
-                <p className="w-fit sm:pl-32 mr-auto">ДИЗАЙНЕРСКУЮ</p>
-                <p className="">МЕБЕЛЬ</p>
+                <p>Создаем </p>
+                <p className="w-fit sm:pl-32 mr-auto"> идеальный</p>
+                <p className="">интерьер</p>
               </motion.div>
               <div
                 className={`lg:flex grid gap-6 pt-4 lg:mt-[70px] sm:mt-0  text-white font-[FuturaPT] text-lg`} //${futura.className}
@@ -134,10 +153,8 @@ export default function LandingPage() {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.6 }}
                   >
-                    Молодая и динамично развивающая компания по производство
-                    комфортной мебели в Узбекистане, работает по индивидуальному
-                    заказу, которые будут доставлять удовольствие заказчикам от
-                    использования.
+                    Давайте вместе создадим уникальное пространство, <br />{" "}
+                    которое будет отражать вашу индивидуальность и стиль.
                   </motion.p>
                 </div>
                 {/* <motion.p
@@ -167,12 +184,11 @@ export default function LandingPage() {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.8 }}
-            className={`uppercase in-container text-4xl sm:text-5xl sm:leading-[50px] leading-[46px] lg:text-8xl mt-14 md:mt-28 font-[Gerhaus]`} //${gerhaus.className}
+            className={`uppercase in-container fontFamily text-4xl sm:text-5xl sm:leading-[50px] leading-[46px] lg:text-8xl mt-14 md:mt-28 font-bold  `} //${gerhaus.className}
           >
             <p className="premium">НАШи</p>
             <p className="w-fit sm:pl-32 mr-auto premium ">ПРЕИМУЩЕСТВА</p>
           </motion.div>
-
           <div
             data-aos="zoom-out-up"
             data-aos-duration="1000"
@@ -206,7 +222,6 @@ export default function LandingPage() {
           </div>
           <div id="2"></div>
           <CompanyInfo />
-
           <CompanyFullBox
             description="Материалы, использованные в производстве кухонь Crealine, отвечают самым высоким стандартам качества, что обеспечивает долговечность и надежность каждого изделия. Благодаря индивидуальному подходу к каждому заказу, клиенты могут реализовать свои собственные идеи и предпочтения, создавая уникальное пространство, отражающее их стиль и характер."
             image={companyFullKitchen}
@@ -214,9 +229,8 @@ export default function LandingPage() {
             subtitleDesc="Верхний ярус кухни включает в себя:
             Каркас Внутренние полки Фасады
             Выдвижные ящики"
-            title="КУхНЯ"
+            title="Офисная мебель"
           />
-
           <CompanyFullBox
             description="Спальни Crealine позволяют воплотить в жизнь самые смелые идеи и представления о комфорте и стиле. Индивидуальный подход к каждому заказу позволяет клиентам выбирать сочетания цветов, фактуры и фурнитуры, создавая уникальное и неповторимое пространство, которое отражает их вкусы и желания.
             Отдыхая в спальне от Crealine, вы окунетесь в атмосферу роскоши и уюта, которая поможет вам полностью расслабиться и забыть о повседневных заботах. Каждый элемент мебели от этого бренда призван создать особую атмосферу гармонии и благополучия, делая ваше пространство уютным и привлекательным."
@@ -225,7 +239,7 @@ export default function LandingPage() {
             subtitleDesc="Верхний ярус кухни включает в себя:
             Каркас Внутренние полки Фасады
             Выдвижные ящики"
-            title="СПАЛЬНЯ"
+            title="Мебель для дома"
           />
           <CompanyFullBox
             description="Дизайнерская детская от Crealine - это удивительное пространство, где воображение детей расцветает, а функциональность и стиль сочетаются с безопасностью и комфортом. Каждый элемент этой детской создан с любовью и заботой, чтобы вдохновить и позитивно влиять на развитие маленьких обитателей.Яркие и игривые цвета, сочные оттенки и интересные текстуры делают эту детскую неповторимой и веселой. Мебель и аксессуары дополнены уникальными дизайнерскими элементами, которые стимулируют фантазию и творчество детей."
@@ -234,10 +248,28 @@ export default function LandingPage() {
             subtitleDesc="Верхний ярус кухни включает в себя:
             Каркас Внутренние полки Фасады
             Выдвижные ящики"
-            title="детская"
+            title="Мебель для ресторанов"
           />
           <CompanyFullBox
-            title="ГОСТИНАЯ"
+            title="Мебель для банкетных залов"
+            description="Дизайнерская гостиная от Crealine — это искусное сочетание элегантности, современности и функциональности, созданное для тех, кто ценит стиль и комфорт. Каждая деталь в этой гостиной воплощает в себе утонченность и гармонию, призванные вдохновить и удивить.Помещение окутано атмосферой изысканности благодаря изысканным материалам и тщательно подобранным элементам декора. Мягкие, но в то же время строгие линии мебели отражают современный дизайн, подчеркивая роскошь и функциональность каждого предмета."
+            image={hotel}
+            subtitle="Что включено:"
+            subtitleDesc="Верхний ярус кухни включает в себя:
+            Каркас Внутренние полки Фасады
+            Выдвижные ящики"
+          />
+          <CompanyFullBox
+            title="Мебель для торговых помещений"
+            description="Дизайнерская гостиная от Crealine — это искусное сочетание элегантности, современности и функциональности, созданное для тех, кто ценит стиль и комфорт. Каждая деталь в этой гостиной воплощает в себе утонченность и гармонию, призванные вдохновить и удивить.Помещение окутано атмосферой изысканности благодаря изысканным материалам и тщательно подобранным элементам декора. Мягкие, но в то же время строгие линии мебели отражают современный дизайн, подчеркивая роскошь и функциональность каждого предмета."
+            image={hotel}
+            subtitle="Что включено:"
+            subtitleDesc="Верхний ярус кухни включает в себя:
+            Каркас Внутренние полки Фасады
+            Выдвижные ящики"
+          />
+          <CompanyFullBox
+            title="Школьная мебель"
             description="Дизайнерская гостиная от Crealine — это искусное сочетание элегантности, современности и функциональности, созданное для тех, кто ценит стиль и комфорт. Каждая деталь в этой гостиной воплощает в себе утонченность и гармонию, призванные вдохновить и удивить.Помещение окутано атмосферой изысканности благодаря изысканным материалам и тщательно подобранным элементам декора. Мягкие, но в то же время строгие линии мебели отражают современный дизайн, подчеркивая роскошь и функциональность каждого предмета."
             image={hotel}
             subtitle="Что включено:"
@@ -248,7 +280,7 @@ export default function LandingPage() {
 
           <div className="in-container" id="4">
             <p
-              className={`uppercase text-4xl mb-6 sm:text-5xl lg:text-8xl font-[Gerhaus]`} //${gerhaus.className}
+              className={`uppercase text-4xl mb-6 sm:text-5xl lg:text-8xl font-bold  fontFamily`} //${gerhaus.className}
               data-aos="zoom-out-right"
               data-aos-duration="1000"
             >
@@ -313,7 +345,7 @@ export default function LandingPage() {
             </div>
             <div id="5"></div>
             <p
-              className={`uppercase mt-20 md:mt-40 text-4xl mb-6 sm:text-5xl lg:text-8xl font-[Gerhaus]`} //${gerhaus.className}
+              className={`uppercase mt-20 md:mt-40 text-4xl mb-6 sm:text-5xl lg:text-8xl font-bold  fontFamily`} //${gerhaus.className}
             >
               ОТЗЫВЫ
             </p>
@@ -322,12 +354,12 @@ export default function LandingPage() {
                 <UserComment
                   description="Спасибо Crealine за великолепный дизайн! Наш дом преобразился, стал стильным и уютным благодаря вашим творениям."
                   image={asad}
-                  name="АСАД"
+                  name="АСАДБЕК"
                 />
                 <UserComment
                   description="Просто восхищены качеством и креативностью Crealine! Их мебель и аксессуары прекрасно вписались в наш интерьер."
                   image={bola}
-                  name="АЛЕКСЕЙ"
+                  name="АРМАН"
                 />
               </div>
               <UserComment
@@ -349,7 +381,7 @@ export default function LandingPage() {
               </div>
             </div>
             <p
-              className={`uppercase mt-20 md:mt-40 text-4xl mb-6 sm:text-5xl lg:text-8xl font-[Gerhaus]`} //${gerhaus.className}
+              className={`uppercase mt-20 md:mt-40 text-4xl mb-6 sm:text-5xl lg:text-8xl font-bold  fontFamily`} //${gerhaus.className}
               data-aos="zoom-out-right"
               data-aos-duration="1000"
             >
@@ -357,7 +389,6 @@ export default function LandingPage() {
             </p>
             <AddQuestions />
           </div>
-
           <div
             className="relative"
             data-aos="zoom-out-right"
@@ -365,7 +396,7 @@ export default function LandingPage() {
           >
             <div className="max-container relative text-white justify-items-center grid pt-24">
               <p
-                className={`uppercase max-xl:py-12 text-4xl mb-6 sm:text-5xl lg:text-8xl text-center font-[Gerhaus]`} // ${gerhaus.className}
+                className={`uppercase max-xl:py-12 text-4xl mb-6 sm:text-5xl lg:text-8xl text-center font-bold  fontFamily`} // ${gerhaus.className}
               >
                 отправьте <br className="max-xl:hidden" /> заявку
               </p>
@@ -426,10 +457,9 @@ export default function LandingPage() {
               />
             </div>
           </div>
-
           <div className="in-container" id="6">
             <p
-              className={` uppercase mt-20 md:mt-40 text-4xl mb-6 sm:text-5xl lg:text-8xl font-[Gerhaus]`} //${gerhaus.className}
+              className={` uppercase mt-20 md:mt-40 text-4xl mb-6 sm:text-5xl lg:text-8xl font-bold  fontFamily`} //${gerhaus.className}
             >
               КОНТАКТЫ
             </p>

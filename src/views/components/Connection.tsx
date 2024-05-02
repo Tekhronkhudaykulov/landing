@@ -11,7 +11,7 @@ function Connection() {
       data-aos-duration="1000"
     >
       <p
-        className={`uppercase text-4xl sm:text-[45px] text-[#262626] text-center xl:text-start font-[Gerhaus]`} //${gerhaus.className}
+        className={`uppercase text-4xl sm:text-[42px] text-[#262626] text-center xl:text-start font-bold fontFamily`} //${gerhaus.className}
       >
         Обратная связь
       </p>

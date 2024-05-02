@@ -2,3 +2,12 @@
   font-family: "PT Sans";
   src: url("./atyp.ttf");
 }
+
+@font-face {
+  font-family: "Mont";
+  src: url("./mont.ttf");
+}
+
+.fontFamiliy {
+  font-family: "Mont";
+}

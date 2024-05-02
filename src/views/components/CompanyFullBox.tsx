@@ -38,7 +38,7 @@ function CompanyFullBox({ image, title, description }: TCompanyFullBox) {
   return (
     <div className="grid justify-items-center mb-16">
       <p
-        className={`uppercase lg:text-[90px] md:text-[70px] text-[50px] font-[Gerhaus]`} //${gerhaus.className}
+        className={`uppercase lg:text-[60px] md:text-[70px] text-[35px] font-bold fontFamily`} //${gerhaus.className}
       >
         {title}
       </p>
@@ -100,7 +100,7 @@ function CompanyFullBox({ image, title, description }: TCompanyFullBox) {
               <CloseIcon style={{ fontSize: "30px" }} />
             </div>
             <p
-              className={`uppercase text-4xl sm:text-[45px] text-[#262626] mt-[20px] text-center xl:text-start `} //${gerhaus.className}
+              className={`uppercase text-4xl sm:text-[42px] text-[#262626] mt-[20px] font-bold  !font-[Montserrat] text-center xl:text-start `} //${gerhaus.className}
             >
               Обратная связь
             </p>

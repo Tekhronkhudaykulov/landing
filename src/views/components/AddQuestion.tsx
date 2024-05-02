@@ -54,7 +54,7 @@ const AddQuestions = () => {
               <CloseIcon style={{ fontSize: "30px" }} />
             </div>
             <p
-              className={`uppercase text-4xl sm:text-[45px] text-[#262626] mt-[20px] text-center xl:text-start `} //${gerhaus.className}
+              className={`uppercase text-4xl sm:text-[42px] font-bold  !font-[Montserrat] text-[#262626] mt-[20px] text-center xl:text-start `} //${gerhaus.className}
             >
               Обратная связь
             </p>

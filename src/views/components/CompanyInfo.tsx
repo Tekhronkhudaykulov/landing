@@ -9,7 +9,6 @@ import rightImg from "../../../public/rightImg.png";
 function CompanyInfo() {
   return (
     <div
-
       style={{ gridTemplateColumns: "46% 1fr" }}
       className="mt-28 md:grid items-center mb-16 md:mb-40"
       data-aos="zoom-out-right"
@@ -18,7 +17,7 @@ function CompanyInfo() {
       <img src={rightImg} alt="" className="max-md:mb-10" />
       <div className="md:pl-[70px] p-4">
         <h4
-          className={`uppercase text-4xl lg:text-7xl text-[#262626] mb-[34px] font-[Gerhaus]`} //${gerhaus.className}
+          className={`uppercase text-4xl lg:text-7xl text-[#262626] mb-[34px] font-bold  fontFamily`} //${gerhaus.className}
         >
           С нами идеи, воплощаются в реальность
         </h4>
