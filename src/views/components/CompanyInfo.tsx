@@ -14,12 +14,18 @@ function CompanyInfo() {
       data-aos="zoom-out-right"
       data-aos-duration="1000"
     >
-      <img src={rightImg} alt="" className="max-md:mb-10" />
+      <img src={rightImg}  alt="" className="max-md:mb-10 h-[100%] object-contain" />
       <div className="md:pl-[70px] p-4">
+      <h4
+          className={`uppercase text-4xl lg:text-7xl text-[#262626] mb-[34px] font-bold  fontFamily`} //${gerhaus.className}
+        >
+        CREALINE
+        </h4>
         <h4
           className={`uppercase text-4xl lg:text-7xl text-[#262626] mb-[34px] font-bold  fontFamily`} //${gerhaus.className}
         >
-          С нами идеи, воплощаются в реальность
+         ЭТО ВАШ НАДЁЖНЫЙ ПАРТНЁР В СОЗДАНИИ
+        МЕБЕЛИ И ПРЕДМЕТОВ ДЕКОРА.
         </h4>
         {/* ${futura.className} */}
         <p className={`text-[#595959] text-xl font-[FuturaPT]`}>

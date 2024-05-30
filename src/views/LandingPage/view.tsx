@@ -2,17 +2,17 @@ import CompanyFullBox from "../components/CompanyFullBox";
 import CompanyInfo from "../components/CompanyInfo";
 import Connection from "../components/Connection";
 import ContactBox from "../components/ContactBox";
-import HomeCard from "../components/HomeCard";
-import { navDatas } from "../components/Navbar";
-import UserComment from "../components/UserComment";
+// import HomeCard from "../components/HomeCard";
+// import { navDatas } from "../components/Navbar";
+// import UserComment from "../components/UserComment";
 // import Image from "next/image";
-import image1 from "../../../public/1.jpg";
-import image2 from "../../../public/2.jpg";
-import image3 from "../../../public/3.jpg";
-import image4 from "../../../public/4.jpg";
-import image5 from "../../../public/5.jpg";
-import image6 from "../../../public/6.jpg";
-import image7 from "../../../public/8.jpg";
+// import image1 from "../../../public/1.jpg";
+// import image2 from "../../../public/2.jpg";
+// import image3 from "../../../public/3.jpg";
+// import image4 from "../../../public/4.jpg";
+// import image5 from "../../../public/5.jpg";
+// import image6 from "../../../public/6.jpg";
+// import image7 from "../../../public/8.jpg";
 import map from "../../../public/map.svg";
 // import Futura from "next/font/local";
 // const futura = Futura({ src: "../fonts/futura.ttf" });
@@ -22,23 +22,25 @@ import companyFullKitchen from "../../../public/companyFull-kitchen.png";
 import bedrom from "../../../public/bedrom.png";
 import childRoom from "../../../public/childRoom.png";
 import hotel from "../../../public/hotel.png";
-import commentUser from "../../../public/commentUser.png";
-import aleksey from "../../../public/aleksey.png";
-import genadiy from "../../../public/genadiy.png";
-import asad from "../../../public/Asad.jpg";
-import bola from "../../../public/Bola.jpg";
-import logoFixed from "../../../public/CREALINE.svg";
+// import commentUser from "../../../public/commentUser.png";
+// import aleksey from "../../../public/aleksey.png";
+// import genadiy from "../../../public/genadiy.png";
+// import asad from "../../../public/Asad.jpg";
+// import bola from "../../../public/Bola.jpg";
+// import logoFixed from "../../../public/CREALINE.svg";
 
 import headerBg from "../../../public/headerBg.png";
 import Footer from "../components/Footer";
 import sendReqSvg from "../../../public/sendReq.svg";
-import Logo from "../../../public/logo.svg";
+// import Logo from "../../../public/logo.svg";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useClickAway } from "react-use";
-import Hamburger from "hamburger-react";
+// import Hamburger from "hamburger-react";
 import { MobileMenu } from "../components/MobileMenu";
-import AddQuestions from "../components/AddQuestion";
+// import AddQuestions from "../components/AddQuestion";
+
+
 
 export default function LandingPage() {
   const [isOpen, setOpen] = useState(false);
@@ -73,7 +75,7 @@ export default function LandingPage() {
                       : "fixed top-0 left-0 right-0 bg-[black] z-[9999]"
                   }`}
                 >
-                  <div className="max-container flex items-center justify-between">
+                  {/* <div className="max-container flex items-center justify-between">
                     <motion.a initial={{ y: -100 }} animate={{ y: 0 }} href="/">
                       {active == true ? (
                         <img src={logoFixed} alt="" />
@@ -127,7 +129,7 @@ export default function LandingPage() {
                         Позвонить
                       </a>
                     </motion.div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </header>
@@ -137,10 +139,11 @@ export default function LandingPage() {
               <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                className={`uppercase fontFamiliy text-4xl sm:leading-[70px] font-bold  leading-[50px] sm:text-5xl lg:text-8xl `} //${gerhaus.className}
+                className={`uppercase fontFamiliy text-4xl sm:leading-[95px] lg:leading-[95px] font-bold  leading-[50px] sm:text-5xl lg:text-7xl `} //${gerhaus.className}
               >
+                <p className=" lg:text-8xl">CREALINE</p>
                 <p>Создаем </p>
-                <p className="w-fit sm:pl-32 mr-auto"> идеальный</p>
+                <p className="w-fit sm:pl-32 mr-auto"> ваш идельный</p>
                 <p className="">интерьер</p>
               </motion.div>
               <div
@@ -153,7 +156,7 @@ export default function LandingPage() {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.6 }}
                   >
-                    Давайте вместе создадим уникальное пространство, <br />{" "}
+                    Давайте вместе создадим уникальное пространство, <br />
                     которое будет отражать вашу индивидуальность и стиль.
                   </motion.p>
                 </div>
@@ -170,6 +173,18 @@ export default function LandingPage() {
                   dolor sit amet, consectetur adipiscing elit
                 </motion.p> */}
               </div>
+              <motion.div
+                      className="lg:block  text-white mt-[40px]"
+                      initial={{ y: -100 }}
+                      animate={{ y: 0 }}
+                    >
+                      <a
+                        href="tel:+998949187177"
+                        className="py-[11px] hover:bg-white hover:text-black hover:border-black px-[22px] border transition-all rounded-[30px]"
+                      >
+                        Позвонить
+                      </a>
+                    </motion.div>
             </div>
             <div className="absolute top-0 left-0 w-full h-full z-[-1]">
               <img
@@ -180,7 +195,7 @@ export default function LandingPage() {
             </div>
           </div>
           <div id="1"></div>
-          <motion.div
+          {/* <motion.div
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.8 }}
@@ -219,7 +234,7 @@ export default function LandingPage() {
                 description="Проверенная европейская техника, сборки мебели и актуальность по отношению к мировым трендам."
               />
             </div>
-          </div>
+          </div> */}
           <div id="2"></div>
           <CompanyInfo />
           <CompanyFullBox
@@ -278,7 +293,7 @@ export default function LandingPage() {
             Выдвижные ящики"
           />
 
-          <div className="in-container" id="4">
+          {/* <div className="in-container" id="4">
             <p
               className={`uppercase text-4xl mb-6 sm:text-5xl lg:text-8xl font-bold  fontFamily`} //${gerhaus.className}
               data-aos="zoom-out-right"
@@ -388,7 +403,7 @@ export default function LandingPage() {
               популярные <br /> вопросы
             </p>
             <AddQuestions />
-          </div>
+          </div> */}
           <div
             className="relative"
             data-aos="zoom-out-right"
